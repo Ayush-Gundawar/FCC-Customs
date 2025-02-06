@@ -1,0 +1,56 @@
+body{
+    box-sizing:border-box;
+    background-image: radial-gradient(ellipse at bottom center, #24CD73 5%, #87FFBF);
+    width:100vw;
+    height:auto;
+  }
+  
+  h1{
+    text-align:center;
+    text-decoration: underline;
+    font-size:2.5rem;
+  }
+  
+  #description{
+    font-size:0.75em;
+    color:maroon;
+  }
+  
+  fieldset{
+    border: maroon 2px dashed;
+    border-radius:20px;
+    margin:10px;
+  }
+  #name, #email, #number, select{
+    display:block;
+  }
+  
+  input[type='text'], input[type='email'], input[type='number'], textarea{
+    border-radius:10px;
+    background-color:#464646;
+    color:white;
+  }
+  select{
+    margin:20px 5px;
+    min-width:200px;
+    width:60%;
+    max-width:300px;
+    color:white;
+    background-color:#464646
+  }
+  
+  #features label{
+    display:block;
+    padding: 2px
+  }
+  
+  #submit{
+    background-color:red;
+    color:white;
+    cursor:pointer;
+    border-radius:20px;
+    border:none;
+    height:30px;
+    
+  }
+  

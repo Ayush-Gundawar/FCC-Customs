@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Purchase Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Mobile Purchase Form</h1>
+    <p id="description">This is the form to get the responses of buyers for their selection of a new mobile phone. This data will be submitted anyonymously and its only for analysis.</p>
+
+    <form action="/submitted.htm" id="survey-form" action="post">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name" id="name-label">Enter Name: <input type="text" name="name" id="name" required placeholder="Ex. John Doe"></label>
+            <label for="email" id="email-label">Enter Email: <input type="email" name="email" id="email" required placeholder="Ex. johndoe13@yahoo.com"></label>
+            <label for="number" id="number-label">Enter Number: (last 3 digits)<input type="number" name="number" id="number" min=0 max=999 required placeholder="373"></label>
+        </fieldset>
+        <fieldset>
+            <legend>Company and OS</legend>
+            <label for="android"><input type="radio" name="os" id="android" value='android'>Android</label>
+            <label for="apple"><input type="radio" name="os" id="apple" value='apple'>Apple</label>
+            <select name="company" id="dropdown">
+                <option value="">Select a Value</option>
+                <option value="samsung">Samsung</option>
+                <option value="oneplus">Oneplus</option>
+                <option value="apple">Apple</option>
+                <option value="motorola">Motorola</option>
+                <option value="oppo">Oppo</option>
+                <option value="vivo">Vivo</option>
+                <option value="xiaomi">Xiaomi</option>
+                <option value="agni">Agni</option>
+            </select>
+        </fieldset>
+        <fieldset id='features'>
+            <legend>Features (Multiple)</legend>
+            <label for="screen-size"><input type="checkbox" name="features" id="screen-size" value="screen-size">Has less than 6.67 inch screen</label>
+            <label for="screen-resolution"><input type="checkbox" name="features" id="screen-resolution" value="screen-resolution">Has a 2k resolution or more</label>
+            <label for="pixel-density"><input type="checkbox" name="features" id="pixel-density" value="pixel-density">Has a higher or equal pixel density to 390 ppi</label>
+            <label for="battery"><input type="checkbox" name="features" id="battery" value="battery">Has a smaller or equal battery capacity than 5000 mah</label>
+            <label for="charging-cap"><input type="checkbox" name="features" id="charging-cap" value="charging-cap">Has a more or equal wattage to 22.5 W</label>
+            <label for="charging-wireless"><input type="checkbox" name="features" id="charging-wireless" value="charging-wireless">Has a wireless charging capacity</label>
+            <label for="nfc"><input type="checkbox" name="features" id="nfc" value="nfc">Is NFC unlocked</label>
+            <label for="ip-rating"><input type="checkbox" name="features" id="ip-rating" value="ip-rating">Has a better or equal IP rating than IP67</label>
+        </fieldset>
+        <fieldset>
+            <legend>Feedback</legend>
+             <textarea name="feedback" id="feedback" cols="50" rows="10" placeholder="Please provide a constructive feedback"></textarea>
+             <button id='submit' type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
