@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+main header{
+    text-align: center;
+    width:100%;
+    padding:0.5em 0;
+    height: auto;
+    background-color: #cecece55;
+    text-wrap: wrap;
+    border-radius: 20px;
+    line-height: 0.7em;
+}
+main > header > h1{
+    
+    text-decoration: underline;
+    font-size:3em;
+}
+main > header > h5{
+    word-spacing: 20px;
+}
+section{
+    margin:40px 0;
+}
+body{
+    width:auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle at top left, #7ac5ff 45%, transparent 75%), radial-gradient(circle at bottom right, #ffbcfe 20%, #c23efe 100%);
+}
+main{
+    border-radius: 12px;
+    padding:15px;
+    border:15px solid #810505c1;
+    margin: 30px;
+    width:90%;
+    background-color: #ffffff95;
+    box-shadow: 0 0 15px 5px #81050555;
+}
+
+#img-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    gap:3px;
+}
+#img-caption{
+    width:50%;
+    text-align: justify;
+    color:#2f2f2f;
+    background-color: whitesmoke;
+    border:none;
+    border-radius: 12px;
+    padding:5px;
+    z-index: 0;
+}
+#image{
+    max-width:100%;
+    border-radius: 12px;
+    z-index: 2;
+    box-shadow: 5px -5px #2f2f2f;
+    border: 2px dashed #810505c1;
+}
+article > h3{
+    text-align: center;
+    font-size:1.5em;
+    text-decoration: underline;
+}
+article{
+    text-wrap: wrap;
+}
+article > p{
+    width: 95%;
+    margin:0 auto;
+    text-align: justify;
+}
+
+.decorate{
+    color:#810505;
+    font-weight:bold;
+}
+
+.quoted{
+    text-align: justify;
+    background-color: #7d7d7d41;
+    border-radius: 16px;
+    font-style: italic;
+    font-size:1.12em;
+    padding:10px;
+}
+a{
+    text-decoration: none;
+    border:none;
+    border-bottom:1.5px solid #810505;
+    padding:5px;
+    border-radius: 12px;
+    color:#810505;
+}
+a:hover{
+    border: 1.5px solid #810505;
+    border-bottom:none;
+    color:#2f2f2f;
+}
