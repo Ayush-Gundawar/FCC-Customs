@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Documentation</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6489/6489932.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/libre-franklin" rel="stylesheet">
+                
+</head>
+<body>
+    <nav id="navbar">
+        <header>SASS Documentation</header>
+        <div id="nav-tuto">
+            <h3>Sass Tutorial</h3>
+            <div class="nav-list">
+                <span><a href="#sass_introduction">Sass HOME</a></span>
+                <span><a class="nav-link" href="#sass_introduction">Sass Introduction</a></span></span>
+                <span><a class="nav-link" href="#sass_installation">Sass Installation</a></span>
+                <span><a class="nav-link" href="#sass_variables">Sass Variables</a></span>
+                <span><a class="nav-link" href="#sass_nested_rules_and_properties">Sass Nesting</a></span>
+                <span><a class="nav-link" href="#sass_import_and_partials">Sass @import</a></span>
+                <span><a class="nav-link" href="#sass_mixin_and_include">Sass @mixin</a></span>
+                <span><a class="nav-link" href="#sass_extend_and_inheritance">Sass @extend</a></span>
+            </div>
+            <div id="nav-func">
+                <h3>Sass Functions</h3>
+                <div class="nav-list">
+                    <span><a class="nav-link" href="#sass_string_functions">Sass String</a></span>
+                    <span><a class="nav-link" href="#sass_numeric_functions">Sass Numeric</a></span>
+                    <span><a class="nav-link" href="#sass_list_functions">Sass List</a></span>
+                    <span><a class="nav-link" href="#sass_map_functions">Sass Map</a></span>
+                    <span><a class="nav-link" href="#sass_selector_functions">Sass Selector</a></span>
+                    <span><a  class="nav-link" href="#sass_introspection_functions">Sass Introspection</a></span>
+                    <span><a class="nav-link" href="#sass_color_functions">Sass Color</a></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="sass_introduction">
+            <header>Sass Introduction</header>
+            <p>
+                <span class="topic">What is Sass?</span>
+                <ul>
+                    <li>Sass stands for Syntactically Awesome Stylesheet</li>
+                    <li>Sass is an extension to CSS</li>
+                    <li>Sass is a CSS pre-processor</li>
+                    <li>Sass is completely compatible with all versions of CSS</li>
+                    <li>Sass reduces repetition of CSS and therefore saves time</li>
+                    <li>Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006</li>
+                    <li>Sass is free to download and use</li>
+                </ul>
+                <span class='topic'>Sass File Type</span>
+                Sass files has the ".scss" file extension.
+                <span class='topic'>Sass Comments</span>
+                Sass supports standard CSS comments /* comment */, and in addition it supports inline comments // comment:
+            </p>
+        </section>
+        <section id="sass_installation" class="main-section">
+            <header>Sass Installation</header>
+            <p>
+                <span class="topic">System Requirements for Sass</span>
+                <ul>
+                    <li>Operating system - Sass is platform independent</li>
+                    <li>Browser support - Sass works in Edge/IE (from IE 8), Firefox, Chrome, Safari, Opera</li>
+                    <li>Programming language - Sass is based on Ruby</li>
+                </ul>
+                <span class="topic">Install Sass</span>
+                There are several ways to install Sass in your system. There are many applications that will get you up and running with Sass in a few minutes for Mac, Windows, and Linux. Some of these are free, but some are paid apps.
+                <a href="https://sass-lang.com/install" target="_blank">Install link</a>
+            </p>
+        </section>
+        <section id="sass_variables" class="main-section">
+            <header>Sass Variables</header>
+            <p>
+                With Sass, you can store information in variables, like:
+                <ul>
+                    <li>strings</li>
+                    <li>numbers</li>
+                    <li>colors</li>
+                    <li>booleans</li>
+                    <li>lists</li>
+                    <li>null</li>
+                </ul>
+                Sass uses the $ symbol, followed by a name, to declare variables:
+                <code>
+                    $variablename: value;
+                </code>
+                <span class="topic">Sass Variable Scope</span>
+                Sass variables are only available at the level of nesting where they are defined.
+                <span class="topic">Using Sass !global</span>
+                <span class="highlighted">!global</span> indicates that a variable is global, which means that it is accessible on all levels.
+                <span class="tips">
+                    Tip: Global variables should be defined outside any rules. It could be wise to define all global variables in its own file, named "_globals.scss", and include the file with the @include keyword.
+                </span>
+            </p>
+        </section>
+        <section id="sass_nested_rules_and_properties" class="main-section">
+            <header>Sass Nested Rules and Properties</header>
+            <p>
+                <span class="topic">Sass Nested Rules
+                </span>
+                Sass lets you nest CSS selectors in the same way as HTML. ex:
+                <code>
+                    nav { <br>
+                    --- ul {<br>
+                    -------- margin: 0;<br>
+                    -------- padding: 0;<br>
+                    -------- list-style: none;<br>
+                    --- }<br>
+                    --- li {<br>
+                    -------- display: <br>inline-block;<br>
+                    --- }<br>
+                    --- a {<br>
+                    -------- display: block;<br>
+                    -------- padding: 6px 12px;<br>
+                    -------- text-decoration: none;<br>
+                    --- }<br>
+                    }<br>
+                </code>
+                Notice that in Sass, the ul, li, and a selectors are nested inside the nav selector.
+                <span class="block">Because you can nest properties in Sass, it is cleaner and easier to read than standard CSS.</span>
+                <span class="topic">Sass Nested Properties</span>
+                Many CSS properties have the same prefix, like font-family, font-size and font-weight or text-align, text-transform and text-overflow. With Sass you can write them as nested properties
+            </p>
+        </section>
+        <section id="sass_import_and_partials" class="main-section">
+            <header>Sass @import and Partials</header>
+            <p>
+                Sass keeps the CSS code DRY (Don't Repeat Yourself). You can create small files with CSS snippets to include in other Sass files.
+                <span class="topic">Sass Importing Files</span>
+                The <span class="highlighted">@import</span> directive allows you to include the content of one file in another. no extra HTTP call is required at runtime.
+                <code>
+                    @import filename;
+                </code>
+                <span class="topic">Sass Partials</span>
+                If you start the filename with an underscore, Sass will not transpile it. Files named this way are called partials in Sass.
+                <span class="block">Sass Partial Syntax</span>
+                <code> _filename;</code>
+                Now, if you import the partial file, omit the underscore. 
+            </p>
+        </section>
+        <section id="sass_mixin_and_include" class="main-section">
+            <header>
+                Sass @mixin and @include
+            </header>
+            <p>
+                <span class="topic">Sass Mixins</span>
+                The <span class="highlighted">@mixin</span> directive lets you create CSS code that is to be reused throughout the website.
+                <span class="block">The <span class="highlighted">@include</span> directive is created to let you use (include) the mixin.</span>
+                <span class="topic">Defining a Mixin</span>
+                Sass @mixin Syntax:
+                <code>
+                    @mixin name { <br>
+                    --- property: value; <br>
+                    --- property: value; <br>
+                    --- ... <br>
+                      } <br>
+                </code>
+                <span class="tips">In sass Hyphens and underscores are considered to be the same. </span>
+                <span class="topic">Using a Mixin</span>
+                Sass <span class="highlighted">@include</span> mixin Syntax:
+                <code>
+                    selector { <br>
+                    --- @include mixin-name; <br>
+                      } <br>
+                </code>
+                A mixin can also include other mixins
+                <span class="topic">Passing Variables to a Mixin</span>
+                mixin with arguments.
+                <code>
+                    @mixin example($param1, $param2) { <br>
+                    --- property: $param1 $param2 ...; <br>
+                    } <br>
+                    .myContainer { <br>
+                    ---  @include example(blue, 1px); <br>
+                      } <br>
+                </code>
+                <span class="topic">Default Values for a Mixin</span>
+                <code>
+                    @mixin example($param1: value1, $param2: value2) { <br>
+                        --- property: $param1 $param2 ...; <br>
+                        } <br>
+                </code>
+                you need to specify the values that change when you include the mixin.
+                <span class="block">Another good use of a mixin is for vendor prefixes.</span>
+            </p>
+        </section>
+        <section id="sass_extend_and_inheritance" class="main-section">
+            <header>
+                Sass @extend and Inheritance
+            </header>
+            <p>
+                <span class="topic">
+                    Sass @extend Directive
+                </span>
+                The <span class="highlighted">@extend</span> directive lets you share a set of CSS properties from one selector to another.
+                <span class="block">The <span class="highlighted">@extend</span> directive is useful if you have almost identically styled elements that only differ in some small details.</span>The <span class="highlighted">@extend</span> directive helps keep your Sass code very DRY.
+                <code>
+                    .myContainer{ <br>
+                    --- property1: value1; <br>
+                    --- property2: value2; <br>
+                    --- ... <br>
+                    } <br>
+                    .myContainer2{ <br>
+                    --- @extend .myContainer1; <br>
+                    --- property3: value3; <br>
+                    --- ... <br>
+                    } <br>
+                </code>
+                This code is equivalent to css's:
+                <code>
+                    .myContainer, .myContainer2{ <br>
+                    --- property1: value1; <br>
+                    --- property2: value2; <br>
+                    --- ... <br>
+                        } <br>
+                    .myContainer2{ <br>
+                    --- property3: value3; <br>
+                    } <br>
+                </code>
+            </p>
+        </section>
+        <section id="sass_string_functions" class="main-section">
+            <header>Sass String Functions</header>
+            <p>
+                <span class="topic">Sass String Functions</span>
+                <span class="tips">Sass strings are 1-based. The first character in a string is at index 1, not 0.</span>
+                <ul>
+                    <li>quote(string)</li>
+                    <li>str-index(string, substring)</li>
+                    <li>str-insert(string,insert_string, index)</li>
+                    <li>str-length(string)</li>
+                    <li>str-slice(string, start, end)</li>
+                    <li>to-lower-case(string)</li>
+                    <li>to-upper-case(string)</li>
+                    <li>unquote(string)</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sass_numeric_functions" class="main-section">
+            <header>Sass Numeric Functions</header>
+            <p>
+                <ul>
+                    <li>abs(number)</li>
+                    <li>ceil(number)</li>
+                    <li>comparable(num1, num2) : compares unit of numbers ex: px, cms, etc..</li>
+                    <li>floor(number)</li>
+                    <li>max(num1, num2, ...)</li>
+                    <li>min(num1, num2, ...)</li>
+                    <li>random()</li>
+                    <li>round()</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sass_list_functions" class="main-section">
+            <header>Sass List Functions</header>
+            <p>
+                Sass lists are immutable (they cannot change). So, the list functions that return a list, will return a new list, and not change the original list.
+                <span class="tips">Sass lists are 1-based. The first list item in a list is at index 1, not 0.</span>
+                <ul>
+                    <li>append(list, value, seperator): seperator is optional</li>
+                    <li>index(list, value)</li>
+                    <li>join(list1, list2, [seperated])</li>
+                    <li>length(list)</li>
+                    <li>list-seperator(list)</li>
+                    <li>nth(list, n)</li>
+                    <li>set-nth(list, n)</li>
+                    <li>zip(list1, list2, ...): Combines lists into a single multidimensional list.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sass_map_functions" class="main-section">
+            <header>Sass Map Functions</header>
+            <p>
+                <span class="topic">
+                    Sass Map Functions
+                </span>
+                <span class="tips">
+                    It is also possible to use the <a href="#sass_list_functions">List functions</a> from the previous page, with maps. Then the map will be treated as a list with two elements.
+                </span>
+                Sass maps are immutable. So, the map functions that return a map, will return a new map, and not change the original map.
+                <ul>
+                    <li>map-get(map, key)</li>
+                    <li>map-has-key(map, key)</li>
+                    <li>map-keys(map)</li>
+                    <li>map-merge(map1, map2)</li>
+                    <li>map-remove(map, keys...)</li>
+                    <li>map-values(map)</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sass_selector_functions" class="main-section">
+            <header>Sass Selector Functions</header>
+            <p>
+                <span class="topic">Sass Selector Functions</span>
+                <ul>
+                    <li>is-superselector(super, sub)</li>
+                    <li>selector-append(selectors)</li>
+                    <li>selector-parse(selector)</li>
+                    <li>selector-replace(selector, original, replacement)</li>
+                    <li>selector-unify(selector1, selector2)</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sass_introspection_functions" class="main-section">
+            <header>Sass Introspection Functions</header>
+            <p>
+                <span class="topic">Sass Introspection Functions</span>
+                The introspection functions are rarely used when building a stylesheet. However, they are valuable if something does not work properly - to figure out what's going on: like debugging functions. Examples:
+                <ul>
+                    <li>call(function, arguments...)</li>
+                    <li>content-exists()</li> 
+                    <li>feature-exists(feature)</li>
+                    <li>function-exists(functionname)</li>
+                    <li>get-function(functionname, css: false),</li>
+                    <li>global-variable-exists(variablename)</li>
+                    <li>inspect(value)</li>
+                    <li>mixin-exists(mixinname)</li>
+                    <li>type-of(value)</li>
+                    <li>unit(number)</li>
+                    <li>unitless(number)</li>
+                    <li>variable-exists(variablename)</li>
+                </ul>
+            </p>
+        </section>
+        <section id="sass_color_functions" class="main-section">
+            <header>Sass Color Functions</header>
+            <p>
+                <span class="topic">Sass Color Functions</span>
+                <ul>
+                    <li>rgb(red, green, blue)</li>
+                    <li>rgba(red, green, blue, alpha)</li>
+                    <li>hsl(hue, saturation, lightness)</li>
+                    <li>hsla(hue, saturation, lightness, alpha)</li>
+                    <li>grayscale(color)</li>
+                    <li>complement(color)</li>
+                    <li>invert(color, weight)</li>
+                </ul>
+                <span class="topic">Sass Get Color Functions</span>
+                <ul>
+                    <li>red(color)</li>
+                    <li>green(color)</li>
+                    <li>blue(color)</li>
+                    <li>hue(color)</li>
+                    <li>saturation(color)</li>
+                    <li>lightness(color)</li>
+                    <li>alpha(color)</li>
+                    <li>opacity(color)</li>
+                </ul>
+                <span class="topic">Sass Manipulate Color Functions
+                </span>
+                <ul>
+                    <li>mix(color1, color2, weight)</li>
+                    <li>adjust-hue(color, degrees)</li>
+                    <li>change-color(color, red, green, blue, hue, saturation, lightness, alpha)</li>
+                    <li>lighten(color, amount)</li>
+                    <li>darken(color, amount)</li>
+                    <li>saturate(color, amount)</li>
+                    <li>desaturate(color, amount)</li>
+                    <li>opacity(color, amount)</li>
+                    <li>fade-in(color, amount)</li>
+                    <li>transparentize(color, amount)</li>
+                    <li>fade-out(color, amount)</li>
+                </ul>
+            </p>
+        </section>
+        <footer>
+            This documentation was made by help of <a href="https://www.w3schools.com/">W3Schools.com</a>
+            . A big thanks for the knowledge. 
+            <span class="block">Made with ♥️ by <a href="https://github.com/Ayush-Gundawar">Ayush Gundawar</a></span>
+        </footer>
+    </main>
+</body>
+</html>
