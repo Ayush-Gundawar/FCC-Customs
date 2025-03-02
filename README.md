@@ -8,6 +8,8 @@ Contains all of my freeCodeCamp journey mini-projects.
 3. #### <img src="https://github.com/user-attachments/assets/71ab2ef5-6d40-45c0-bfe7-4e729f63298f" width="15px" alt='Folder icon'/> Tribute-Page
 4. #### <img src="https://github.com/user-attachments/assets/71ab2ef5-6d40-45c0-bfe7-4e729f63298f" width="15px" alt='Folder icon'/> SASS Documentation
 5. #### <img src="https://github.com/user-attachments/assets/71ab2ef5-6d40-45c0-bfe7-4e729f63298f" width="15px" alt='Folder icon'/> Jurassic Park Franchise
+6. #### <img src="https://github.com/user-attachments/assets/71ab2ef5-6d40-45c0-bfe7-4e729f63298f" width="15px" alt='Folder icon'/> Portfolio Page
+
 
 > I thank FCC to let me learn on this platform for free and acknowledge their role in educating me essential concepts through their fun curriculum.
 >
