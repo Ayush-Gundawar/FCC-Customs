@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Number Checker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/244/244210.png" type="image/x-icon">
+    </head>
+    <body>
+        <main class="flex-c-c">
+            <div id="screen" class="screen-lt flex-c-c">
+                <div class="flex-c-c punch-hole-nav">
+                    <div id="punch-hole"  class="flex-c-c">
+                        <div id="punch-hole-inner"></div>
+                    </div>
+                </div>
+                <div id="navbar" class="flex-c-c">
+                    <div id="nav-left"><p>airtel</p></div>
+                    <div id="nav-center"></div>
+                    <div id="nav-right">
+                        <img class="unselectable" src="https://cdn-icons-png.flaticon.com/512/7249/7249380.png" alt="vpn" loading="lazy">
+                        <img class="unselectable" src="https://cdn-icons-png.flaticon.com/512/1/1848.png" alt="wifi" loading="lazy">
+                        <img class="unselectable" src="https://cdn-icons-png.flaticon.com/512/39/39934.png" alt="network" loading="lazy">
+                        <img class="unselectable" src="https://cdn-icons-png.flaticon.com/512/664/664882.png" alt="battery" loading="lazy">
+                    </div>
+                </div>
+                <button type="button" id="theme" title="theme"></button>
+                <form action="" id="form">
+                    <input type="text" name="number" id="user-input" placeholder="1 555 555 5555" class="input-lt">
+                    <button type="button" id="check-btn" class="btn-lt" name="check">Check</button>
+                    <button type="button" id="clear-btn" class="btn-lt" name="clear">Clear</button>
+                    <div id="results-div" class="flex-c-c"></div>
+                </form>
+            </div>
+            <footer>Made with ♥️ by Ayush</footer>
+        </main>
+    <script src="script.js"></script>
+    </body>
+</html>

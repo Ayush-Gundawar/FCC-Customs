@@ -1,0 +1,205 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    content: '';
+    margin:0;
+    padding:0;
+}
+:root{
+    --green: #3bb44f;
+    --red: #ce2828;
+    --bgcolor1: #78c6c2;
+    --bgcolor2: #5b5b5b;
+    --mobile: #42b5e6;
+    --mobile2: #2e7c9e;
+    --screen-light1: #9c41d8;    --screen-light2: #af77d5;
+    --screen-dark1: #11031f;
+    --screen-dark2: #1f0317;
+    --black: #000;
+    --text-light: #3e144d;
+    --text-dark: #0e4e67;
+    --btn-light: #ecda91;
+    --btn-dark: #f8dba4;
+    --input-light: #6d5050;
+    --input-dark: #b7a4a4;
+    --result-div:#267f8f2a;
+}
+main{
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+    background-image: radial-gradient(circle 37vw, var(--mobile), var(--bgcolor2));
+    flex-direction: column;
+}
+.flex-c-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green{
+    color:var(--green);
+}
+.red{
+    color:var(--red);
+}
+.screen-lt{
+    background-image: radial-gradient(circle 500px at top left,var(--screen-light1) 20%, var(--screen-light2) 60%, transparent), radial-gradient(circle 600px at center right,#273ca8, #6caeda);
+    color: var(--text-light);
+}
+.screen-dt{
+    background-image: radial-gradient(circle 500px at top left, var(--screen-dark2) 5%, var(--screen-dark1) 90%,var(--black));
+    color: var(--text-dark);
+}
+.input-lt{
+    background-color: var(--input-light);
+}
+.input-dt{
+    color:var(--text-dark);
+    background-color: var(--input-dark);
+}
+.btn-lt{
+    color: var(--text-light);
+    background-color: var(--btn-light);
+}
+.btn-dt{
+    color:var(--text-dark);
+    background-color: var(--btn-dark);
+}
+#results-div{
+    background-color: var(--result-div);
+}
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+#screen{
+    height:65%;
+    min-height: 500px;
+    max-width: 300px;
+    width:42%;
+    border:7px solid var(--mobile2);
+    border-radius:30px;
+    transition: ease-out 1s;
+    position:relative;
+}
+#screen:hover{
+    transition: ease-in-out 1s;
+    box-shadow: 3px 3px 15px 2px var(--black);
+}
+#navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:30px;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: center;
+    font-size:0.7rem;
+    padding:0 5px;
+    z-index: 10;
+}
+#nav-right > img{
+    width:15px;
+    margin: 0 2px;
+}
+#nav-right{
+    width:40%;
+}
+#nav-center{
+    width:65%;
+}
+#nav-left{
+    width:15%;
+    padding: 0 10px;
+    color:var(--text-light);
+}
+#theme{
+    position: absolute;
+    width:  30px;
+    height:30px;
+    border-radius: 30px;
+    top:10%;
+    right:5%;
+    border:none;
+    background-color: var(--screen-dark2);
+    cursor: pointer;
+}
+.punch-hole-nav{
+    width:100%;
+    position: absolute;
+    top:7px;
+    left:0;
+}
+#punch-hole{
+    width:15px;
+    height:15px;
+    border-radius: 20px;
+    background-color: var(--black);
+}
+#punch-hole-inner{
+    width:50%;
+    height:50%;
+    border-radius: 20px;
+    background-color: #494949;
+}
+#form{
+   width:90%;
+   height:60%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   place-items: center;
+}
+#user-input{
+    grid-area:1/1/2/3;
+    border-radius: 12px;
+    height:30px;
+    outline:none;
+    border:none;
+    padding:0 20px;
+    width:80%;
+}
+#results-div{
+    grid-area: 3/1/5/3;
+    font-weight: bold;
+    width:90%;
+    height:100%;
+    background-color: var(--result-div);
+    border-radius: 12px;
+    text-align: center;
+}
+#check-btn{
+    grid-area:2/1/3/2;
+    border:none;
+    border-radius:15px;
+    height:30px;
+    width:50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#clear-btn{
+    grid-area:2/2/3/3;
+    border:none;
+    border-radius:15px;
+    height:30px;
+    width:50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+footer{
+    z-index: 100;
+    font-size: 0.7rem;
+    color:var(--screen-dark2);
+    text-align: right;
+    width:42%;
+    max-width: 300px;
+}
+
+@media screen and (max-width:700px){
+    #nav-right{
+        width: 70%;
+    }
+}
